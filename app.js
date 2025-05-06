@@ -49,3 +49,6 @@ app.use('/api/nearby', nearbyRoute); // ✅ 라우터 등록
 app.listen(PORT, () => console.log(`🚀 서버 실행 중: http://localhost:${PORT}`));
 app.use(cors());
 app.use('/constructions', constructionRoute);
+
+const fetchRoadData = require('./services/fetchRoadData');
+fetchRoadData(); // 서버 시작 시 돌발 공사 데이터 한 번 수집
